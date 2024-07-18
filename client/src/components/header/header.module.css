@@ -1,0 +1,42 @@
+.header {
+    background-color: #2875f0 !important;
+    height: 55px ;
+}
+
+.myImage {
+    width: 75px;
+}
+
+.myBox {
+    margin-left: 12%;
+    line-height: 0%;
+}
+
+.myTypo {
+    font-size: 10px !important;
+    font-style: italic;
+    margin-left: 5px !important;
+}
+
+.mySpan {
+    color: #FFBF00;
+}
+
+.mySubImage {
+    width: 10px;
+    height: 10px;
+}
+
+.subBox {
+    display: flex;
+    width: 80px;
+    justify-content: space-between;
+}
+
+.tool {
+    min-height: 55px !important;
+}
+
+.otherContainer {
+    margin: 0 5% 0 auto !important;
+}

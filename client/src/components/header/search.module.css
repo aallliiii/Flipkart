@@ -1,0 +1,22 @@
+.InputContainer {
+    background-color: #fff;
+    width: 38%;
+    border-radius: 2px;
+    margin-left: 13px;
+    display: flex;
+   
+}
+
+.inputField {
+    width: 100%;
+    padding-left: 10px;
+    font-size: unset;
+    padding-top: 3px;
+    
+}
+
+.search {
+    color: #0000ff;
+    padding-top: 5px;
+    padding-right: 5px;
+}
