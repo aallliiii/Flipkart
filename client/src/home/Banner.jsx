@@ -38,7 +38,12 @@ const Banner = () => {
         autoPlaySpeed={4000}
       >
         {bannerData.map((data) => (
-          <img src={data.url} alt="image" className={styles.bannerImage} />
+          <img
+            src={data.url}
+            alt="image"
+            className={styles.bannerImage}
+            key={data.id}
+          />
         ))}
       </Carousel>
     </>

@@ -1,0 +1,66 @@
+.container {
+    height: 70vh;
+    width: 90vh;
+    display: flex;
+}
+
+.imageBox {
+    height: 81.7%;
+    width: 30%;
+    background-color: #2874f0;
+    background-image: url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png);
+    background-repeat: no-repeat;
+    background:url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png) center 85% no-repeat #2874f0;
+    padding: 45px 35px;
+}
+
+.containerInput {
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+}
+
+.marginTop {
+    margin-top: 20px !important;
+}
+
+.loginButton {
+    background-color: #fb641b !important;
+    color: #fff !important;
+    text-transform: none !important;
+    height: 48px !important ;
+    border-radius: 2px !important;
+}
+
+.requestOtpButton {
+    background-color: #fff !important;
+    color: #2874f0 !important;
+    text-transform: none !important;
+    height: 48px !important;
+    border-radius: 2px !important;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0/ 20%) !important;
+}
+
+.text {
+    font-size: 12px;
+    color: #878787;
+}
+
+.bottomText{
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #2874f0;
+    text-align: center;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.colorWhite {
+    color: #ffffff;
+    font-weight: 600;
+}

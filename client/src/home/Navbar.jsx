@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <Box className={styles.navContainer}>
         {navData.map((data) => (
-          <Box className={styles.navBar}>
+          <Box className={styles.navBar} key={data.url}>
             <img src={data.url} alt="my image" className={styles.navBarImage} />
             <Typography className={styles.textFont}>{data.text}</Typography>
           </Box>
