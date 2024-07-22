@@ -1,0 +1,19 @@
+.accountName {
+    margin-right: 40px !important;
+    color: #ffffff !important;
+   
+    text-transform: none !important;
+    padding: 3px 40px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    font-weight: 600 !important;
+    height: 30px !important;
+    padding-top: 6px !important;
+    cursor: pointer;
+
+}
+
+.marginTop {
+    margin-top: 10px;
+    margin-left: 40px;
+}

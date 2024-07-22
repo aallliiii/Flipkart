@@ -64,3 +64,9 @@
     color: #ffffff;
     font-weight: 600;
 }
+
+.validText {
+    font-size: 13px !important;
+    padding-top: 10px !important;
+    color: red;
+}

@@ -1,14 +1,20 @@
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
+import { DataContext } from "../../context/DataProvider";
 import { Box, TextField, Typography, Button } from "@mui/material";
 import styles from "./LoginDialog.module.css";
-import { useState } from "react";
-import { authenticateSignUp } from "../../service/api";
+import { useState, useContext } from "react";
+import { authenticateLogin, authenticateSignUp } from "../../service/api";
 const LoginDialog = (props) => {
   function handleOnClose() {
+    setValidLogin(false);
     props.setDialogOpen(false);
   }
+  const loginInitialValues = {
+    username: "",
+    password: "",
+  };
 
+  const [credentials, setCredentials] = useState(loginInitialValues);
   const inputInitialValues = {
     firstName: "",
     lastName: "",
@@ -21,6 +27,8 @@ const LoginDialog = (props) => {
 
   const [login, setLogin] = useState("login");
   const [heading, setHeading] = useState("Login");
+  const { account, setAccount } = useContext(DataContext);
+  const [validLogin, setValidLogin] = useState(false);
 
   function handleCreateAccount() {
     setLogin("signup");
@@ -28,14 +36,32 @@ const LoginDialog = (props) => {
   }
   async function handleSignUp() {
     let response = await authenticateSignUp(inputState);
+    if (!response) {
+      return;
+    }
+    setAccount(inputState.firstName);
+    props.setDialogOpen(false);
   }
   function handleContinue() {
     setLogin("login");
     setHeading("Login");
   }
-
+  function handleLoginValueChange(e) {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  }
   function handleOnChangeInputField(e) {
     setInputState({ ...inputState, [e.target.name]: e.target.value });
+  }
+
+  async function handleLogin() {
+    let response = await authenticateLogin(credentials);
+    if (response.status === 401) {
+      setValidLogin(true);
+    } else if (response.status === 200) {
+      setAccount(response.data.data.firstName);
+      setValidLogin(false);
+      props.setDialogOpen(false);
+    }
   }
   return (
     <Dialog
@@ -60,14 +86,29 @@ const LoginDialog = (props) => {
           <Box className={`${styles.containerInput} ${styles.marginTop}`}>
             <TextField
               variant="standard"
-              label="Enter Email or Phone Number..."
+              label="Enter Username"
+              onChange={(e) => handleLoginValueChange(e)}
+              name="username"
             ></TextField>
-            <TextField variant="standard" label="Enter Password"></TextField>
+            <TextField
+              variant="standard"
+              label="Enter Password"
+              name="password"
+              onChange={(e) => handleLoginValueChange(e)}
+            ></TextField>
+            {validLogin ? (
+              <Typography className={styles.validText}>
+                Please enter valid username or password
+              </Typography>
+            ) : null}
             <Typography className={`${styles.marginTop} ${styles.text}`}>
               By continuing you agree to Flipkart's Term of Use and Privacy
               Policy
             </Typography>
-            <Button className={`${styles.marginTop} ${styles.loginButton}`}>
+            <Button
+              className={`${styles.marginTop} ${styles.loginButton}`}
+              onClick={() => handleLogin()}
+            >
               Login
             </Button>
             <Typography className={`${styles.marginTop} ${styles.alignCenter}`}>

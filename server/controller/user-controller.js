@@ -13,3 +13,20 @@ export const userSignUp = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const userLogin = async (req, res) => {
+  try {
+    let loginValid = await User.findOne({
+      userName: req.body.username,
+      password: req.body.password,
+    });
+
+    if (loginValid) {
+      res.status(200).json({ data: loginValid });
+    } else {
+      res.status(401).json({ message: "user does not exists" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
