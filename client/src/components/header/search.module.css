@@ -4,7 +4,7 @@
     border-radius: 2px;
     margin-left: 13px;
     display: flex;
-   
+   margin-right: 300px;
 }
 
 .inputField {
@@ -19,4 +19,13 @@
     color: #0000ff;
     padding-top: 5px;
     padding-right: 5px;
+}
+
+.myList {
+    position: absolute !important;
+    margin-top: 50px !important;
+    background-color: #000;
+    color: #fff;
+ 
+    
 }

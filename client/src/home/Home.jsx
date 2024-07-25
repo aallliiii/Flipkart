@@ -18,7 +18,24 @@ const Home = () => {
       <Navbar></Navbar>
       <Box className={styles.container}>
         <Banner></Banner>
-        <Slide products={products}></Slide>
+        <Slide products={products} title="Flash Sale" isTimer={true}></Slide>
+        <Slide products={products} title="Just For You" isTimer={false}></Slide>
+        <Slide products={products} title="Gadget Store" isTimer={false}></Slide>
+        <Slide
+          products={products}
+          title="Gaming accessories"
+          isTimer={false}
+        ></Slide>
+        <Slide products={products} title="Deals in PCs" isTimer={false}></Slide>
+        <Slide
+          products={products}
+          title="Home décor under Rs 5000"
+          isTimer={false}
+        ></Slide>
+        <Slide
+          products={products}
+          title="Shop activity trackers and smartwatches"
+        ></Slide>
       </Box>
     </>
   );

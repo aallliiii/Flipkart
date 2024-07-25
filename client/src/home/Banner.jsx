@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { bannerData } from "../constants/data";
 import styles from "./Banner.module.css";
+import { styled } from "@mui/material";
 
 const Banner = () => {
   const responsive = {
@@ -24,6 +25,13 @@ const Banner = () => {
     },
   };
 
+  const Image = styled("img")(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      objectFit: "cover",
+      height: 180,
+    },
+  }));
+
   return (
     <>
       <Carousel
@@ -38,7 +46,7 @@ const Banner = () => {
         autoPlaySpeed={4000}
       >
         {bannerData.map((data) => (
-          <img
+          <Image
             src={data.url}
             alt="image"
             className={styles.bannerImage}

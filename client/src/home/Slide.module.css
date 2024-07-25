@@ -1,0 +1,49 @@
+.containerMain {
+    margin-top: 10px !important;
+    background-color: #ffffff !important;
+}
+
+.upperBox {
+    padding: 15px 20px;
+    display: flex;
+}
+
+.timer {
+    display: flex;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #7f7f7f;
+}
+
+.clockImage {
+    width: 22px;
+    margin-right: 8px;
+}
+
+.dealText {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+}
+
+.viewButton {
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    margin-left: auto !important;
+}
+
+.productImages {
+    width: auto;
+    height: 150px;
+}
+
+.imageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textFont {
+    font-size: 14px !important;
+    margin-top: 5px !important;
+}

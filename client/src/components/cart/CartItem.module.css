@@ -1,0 +1,23 @@
+
+
+.container {
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+}
+
+.leftContainer {
+    margin: 20px !important;
+}
+
+.smallText {
+    color: #878787 !important;
+    font-size: 14px !important;
+    margin-top: 10px !important;
+}
+
+.removeButton {
+    font-size: 16px !important;
+    margin-top: 20px !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+}

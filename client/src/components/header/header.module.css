@@ -1,6 +1,7 @@
 .header {
     background-color: #2875f0 !important;
     height: 55px ;
+    z-index: 100000;
 }
 
 .myImage {
@@ -39,4 +40,17 @@
 
 .otherContainer {
     margin: 0 5% 0 auto !important;
+}
+
+.myButton {
+    margin-right: 40px !important;
+    color: #2874f0 !important;
+    background-color: #fff !important;
+    text-transform: none !important;
+    padding: 5px 40px !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    font-weight: 600 !important;
+    height: 30px !important;
+
 }

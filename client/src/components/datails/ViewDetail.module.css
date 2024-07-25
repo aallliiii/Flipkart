@@ -1,0 +1,53 @@
+.imageButtonContainer {
+    min-width: 40%;
+    padding: 40px 0 0 80px;
+}
+
+.myImage {
+    
+    width: 95%;
+}
+
+.component {
+    background-color: #f2f2f2;
+    margin-top: 60px !important;
+
+}
+
+.container {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.containerRight {
+    margin-top: 50px !important;
+    padding-left: 20px !important;
+}
+
+.myButton {
+    width: 46% !important;
+    height: 50px !important;
+    border-radius: 2px !important;
+}
+
+.myImageBox {
+    padding: 15px 20px;
+    border: 1px solid #f0f0f0;
+}
+
+.badge {
+    font-size: 16px !important;
+    margin-right: 10px !important;
+}
+
+.smallText {
+    font-size: 12px !important;
+    margin-top: 8px !important;
+}
+
+.delivery {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+}

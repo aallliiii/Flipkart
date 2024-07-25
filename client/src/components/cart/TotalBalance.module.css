@@ -1,0 +1,14 @@
+.heading {
+    padding: 15px 24px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    color: #878787 !important;
+}
+
+.containerBox {
+    padding: 15px 24px !important;
+}
+
+.writing {
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+}
