@@ -123,7 +123,7 @@ const LoginDialog = (props) => {
               className={`${styles.marginTop} ${styles.bottomText}`}
               onClick={() => handleCreateAccount()}
             >
-              New to Flipkart? Create an account
+              New to ShopEase? Create an account
             </Typography>
           </Box>
         ) : (

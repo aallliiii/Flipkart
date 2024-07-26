@@ -9,7 +9,8 @@
 }
 
 .component {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
+    background-color: #000;
     margin-top: 60px !important;
 
 }

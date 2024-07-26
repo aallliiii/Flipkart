@@ -32,7 +32,7 @@ const Header = () => {
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a className="navbar-brand" style={{ color: "#fff" }}>
-              My Ecommerce Brand
+              ShopEase
             </a>
 
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -49,13 +49,15 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" style={{ color: "#fff" }}>
-                  Cart
-                </a>
+                <Link to={"/cart"} style={{ textDecoration: "none" }}>
+                  <a className="nav-link" style={{ color: "#fff" }}>
+                    Cart
+                  </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle disabled"
                   href="#"
                   id="navbarDropdown"
                   role="button"

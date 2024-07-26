@@ -8,6 +8,7 @@ import ViewDetail from "./components/datails/ViewDetail.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Cart from "./components/cart/Cart.jsx";
+import Footer from "./components/Footer.jsx";
 function App() {
   return (
     <DataProvider>
@@ -22,6 +23,7 @@ function App() {
             </Routes>
           </Box>
         </Box>
+        <Footer></Footer>
       </BrowserRouter>
     </DataProvider>
   );

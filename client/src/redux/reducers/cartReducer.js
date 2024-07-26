@@ -13,6 +13,13 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
           (product) => product.id !== action.payload
         ),
       };
+
+    case actionTypes.BUY_PRODUCTS:
+    case actionTypes.BUY_PRODUCTS:
+      return {
+        ...state,
+        cartItems: [],
+      };
     default:
       return state;
   }

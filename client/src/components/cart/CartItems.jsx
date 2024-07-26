@@ -1,6 +1,13 @@
 import { Box, Typography, Button } from "@mui/material";
 import styles from "./CartItem.module.css";
+import { removeFromCart } from "../../redux/actions/cartActions";
+import { useDispatch } from "react-redux";
 const CartItems = ({ item }) => {
+  const dispatch = useDispatch();
+
+  const removeFromCartClick = (id) => {
+    dispatch(removeFromCart(id));
+  };
   return (
     <Box className={styles.container} style={{ marginTop: 20, padding: 10 }}>
       <Box className={styles.leftContainer}>
@@ -27,7 +34,12 @@ const CartItems = ({ item }) => {
           <Box style={{ color: "#399e3c" }}>{item.price.discount}</Box>
           &nbsp;&nbsp;&nbsp;
         </Typography>
-        <Button className={styles.removeButton}>Remove</Button>
+        <Button
+          className={styles.removeButton}
+          onClick={() => removeFromCartClick(item.id)}
+        >
+          Remove
+        </Button>
       </Box>
     </Box>
   );
